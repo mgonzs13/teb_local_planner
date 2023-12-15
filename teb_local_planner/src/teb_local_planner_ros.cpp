@@ -715,7 +715,7 @@ bool TebLocalPlannerROS::transformGlobalPlan(const std::vector<geometry_msgs::ms
     geometry_msgs::msg::TransformStamped plan_to_global_transform = tf_->lookupTransform(
                 global_frame, tf2_ros::fromMsg(plan_pose.header.stamp),
                 plan_pose.header.frame_id, tf2::timeFromSec(0),
-                plan_pose.header.frame_id, tf2::durationFromSec(0.5));
+                plan_pose.header.frame_id, tf2::durationFromSec(0.0));
 
 //    tf_->waitForTransform(global_frame, ros::Time::now(),
 //    plan_pose.header.frame_id, plan_pose.header.stamp,
